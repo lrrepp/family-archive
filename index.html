@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Archive</title>
+<style>
+:root { --ink:#2b2118; --paper:#faf6ef; --accent:#7a5c3e; --card:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Georgia,serif; color:var(--ink); background:var(--paper); line-height:1.5; }
+header { background:#2b2118; color:#f5efe2; padding:3rem 1.5rem; text-align:center; }
+header h1 { margin:0 0 .5rem; font-size:2.2rem; letter-spacing:.02em; }
+header p { margin:.25rem 0; opacity:.85; }
+nav { background:#3a2d20; padding:.6rem 1rem; position:sticky; top:0; z-index:10; overflow-x:auto; white-space:nowrap; }
+nav a { color:#e8dcc4; text-decoration:none; margin-right:1.1rem; font-size:.92rem; }
+main { max-width:1100px; margin:0 auto; padding:1.5rem 1rem 4rem; }
+section { margin:2.5rem 0; border-top:2px solid #d9cbb2; padding-top:1.2rem; }
+h2 { margin:0 0 .2rem; font-size:1.6rem; }
+.counts { color:#8a7358; margin:.2rem 0 1rem; font-size:.95rem; }
+h3 { font-size:1.1rem; color:var(--accent); margin:1.4rem 0 .6rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:.7rem; }
+.card { display:block; background:var(--card); border:1px solid #e3d7c0; border-radius:8px; overflow:hidden;
+        text-decoration:none; color:var(--ink); }
+.card img { width:100%; height:120px; object-fit:cover; display:block; background:#eee; }
+.card span { display:block; padding:.4rem .5rem; font-size:.78rem; }
+.list { display:flex; flex-direction:column; gap:.3rem; }
+.rowlink { display:block; background:var(--card); border:1px solid #e3d7c0; border-radius:6px;
+            padding:.45rem .7rem; text-decoration:none; color:var(--ink); font-size:.9rem; }
+.rowlink:hover, .card:hover { border-color:var(--accent); }
+.tag { display:inline-block; background:#e8dcc4; border-radius:4px; font-size:.72rem; padding:.05rem .4rem; margin-right:.5rem; }
+.dom { color:#8a7358; font-size:.78rem; margin-left:.5rem; }
+footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Family Archive</h1>
+  <p id="stats"></p>
+  <p style="font-size:.9rem">A private hub for the family &mdash; click any photo or document to open it.</p>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<footer id="foot"></footer>
+<script>var ITEMS = [];</script>
+<script src="data1.js"></script>
+<script src="data2.js"></script>
+<script src="data3.js"></script>
+<script>
+function esc(s){ var d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+(function(){
+  var people = {};
+  ITEMS.forEach(function(e){
+    var top = e.d === '.' ? 'Family Archive' : e.d.split('/')[0];
+    (people[top] = people[top] || []).push(e);
+  });
+  var order = Object.keys(people).sort();
+  var totalImgs = ITEMS.filter(function(e){ return e.k === 'image'; }).length;
+  var totalDocs = ITEMS.length - totalImgs;
+  document.getElementById('stats').textContent =
+    order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links';
+  document.getElementById('nav').innerHTML = order.map(function(p){
+    return '<a href="#' + esc(p) + '">' + esc(p) + '</a>';
+  }).join('');
+  function row(e){
+    var nm = esc(e.n);
+    if (e.k === 'image') {
+      return '<a class="card" href="' + esc(e.u) + '" target="_blank" rel="noopener">' +
+        '<img loading="lazy" src="' + esc(e.t) + '" alt="' + nm + '"><span>' + nm + '</span></a>';
+    }
+    if (e.k === 'link') {
+      return '<a class="rowlink" href="' + esc(e.u) + '" target="_blank" rel="noopener">' +
+        '<span class="tag">link</span> ' + nm + '<span class="dom">' + esc(e.dom || '') + '</span></a>';
+    }
+    return '<a class="rowlink" href="' + esc(e.u) + '" target="_blank" rel="noopener">' +
+      '<span class="tag">doc</span> ' + nm + '</a>';
+  }
+  document.getElementById('main').innerHTML = order.map(function(p){
+    var g = people[p];
+    var imgs = g.filter(function(e){ return e.k === 'image'; }).length;
+    var subs = {};
+    g.forEach(function(e){ (subs[e.d] = subs[e.d] || []).push(e); });
+    var body = Object.keys(subs).sort().map(function(sd){
+      var list = subs[sd];
+      var label = sd.indexOf('/') > -1 ? esc(sd.split('/').slice(1).join(' / ')) : '';
+      var cls = list.some(function(e){ return e.k === 'image'; }) ? 'grid' : 'list';
+      return '<div class="sub">' + (label ? '<h3>' + label + '</h3>' : '') +
+        '<div class="' + cls + '">' + list.map(row).join('') + '</div></div>';
+    }).join('');
+    return '<section id="' + esc(p) + '"><h2>' + esc(p) + '</h2>' +
+      '<p class="counts">' + imgs + ' photos \u00b7 ' + (g.length - imgs) + ' documents &amp; links</p>' +
+      body + '</section>';
+  }).join('');
+  document.getElementById('foot').textContent = 'Family Archive \u00b7 ' + ITEMS.length + ' items total';
+})();
+</script>
+</body>
+</html>

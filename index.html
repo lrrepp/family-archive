@@ -30,6 +30,19 @@ h3 { font-size:1.1rem; color:var(--accent); margin:1.4rem 0 .6rem; }
 .tag { display:inline-block; background:#e8dcc4; border-radius:4px; font-size:.72rem; padding:.05rem .4rem; margin-right:.5rem; }
 .dom { color:#8a7358; font-size:.78rem; margin-left:.5rem; }
 footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
+.tree-lead { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+.couples { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.couple { background:var(--card); border:1px solid #e3d7c0; border-radius:8px; padding:1rem 1.2rem; }
+.couple h4 { margin:0 0 .5rem; font-size:1.05rem; }
+.couple p { margin:.25rem 0; font-size:.88rem; }
+.person { background:var(--card); border:1px solid #e3d7c0; border-radius:8px; padding:1rem 1.2rem; }
+.person h4 { margin:0 0 .4rem; font-size:1.05rem; }
+.person p { margin:.15rem 0; font-size:.88rem; }
+.person.lead img { width:120px; height:120px; object-fit:cover; border-radius:50%; display:block; margin-bottom:.8rem; }
+.married { margin:.5rem 0 0; font-size:.85rem; color:#8a7358; font-style:italic; }
+.tree-note { font-size:.85rem; color:#8a7358; }
+.tree-note a { color:#7a5c3e; }
+@media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
@@ -43,6 +56,71 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <p style="font-size:.95rem">Spot a mistake, recognize someone, or have a memory to add? <a href="https://family-archive-suggestions.lovable.app" style="color:#f5efe2;">Add suggestions here</a></p>
 </header>
 <nav id="nav"></nav>
+<section id="tree">
+  <h2>Family Tree</h2>
+  <p class="counts">The Gibson lineage &mdash; from the chart Diane Marie Gibson compiled.</p>
+  <div class="tree-lead">
+    <div class="person lead">
+      <img src="https://drive.google.com/thumbnail?id=1EfIvUL_oe7lKFCa7SN0D2UWC-6qKtUfj&amp;sz=w400" alt="Russell Joseph Gibson">
+      <h4>Russell Joseph Gibson</h4>
+      <p>b: 11/05/1919 in Munhall, Allegheny, PA, USA<br>d: 6 August 2013 in McAllen, TX, USA<br>m: 22 Aug 1945 in NJ, USA</p>
+    </div>
+    <div class="person lead">
+      <img src="https://drive.google.com/thumbnail?id=1CASVKCj7aCbT0WX4bsZTHDgaU07TTjk1&amp;sz=w400" alt="Marianne Elizabeth (Betty) Lawrence">
+      <h4>Marianne Elizabeth (Betty) Lawrence</h4>
+      <p>b: 02/01/1925 in Ramsey, Bergen, NJ, USA<br>d: 06/15/1984 in Buffalo, Erie, NY, USA<br>m: 22 Aug 1945 in NJ, USA</p>
+    </div>
+  </div>
+  <p class="tree-note">Married 22 August 1945 in New Jersey, USA.</p>
+  <h3>Diane's great-grandparents</h3>
+  <div class="couples">
+    <div class="couple">
+      <h4>Winfield H. Gibson &amp; Mary E. "May" Kelly (Kelley)</h4>
+      <p>Winfield &mdash; b: 07/27/1859 in PA, USA; d: 01/01/1910 in Munhall, Allegheny, PA, USA</p>
+      <p>Mary &mdash; b: 27 July 1859 in Pittsburgh, PA, USA; d: 01 Jan 1910 in Munhall, Allegheny, PA, USA</p>
+      <p class="married">Married 1882</p>
+    </div>
+    <div class="couple">
+      <h4>John Byrne Carney &amp; Jenny (Jane) Ivory</h4>
+      <p>John &mdash; b: 14 September 1860 in Loretto, Cambria, PA, USA; d: Abt 1945 in 315 Cherry St., West Homestead, PA</p>
+      <p>Jenny &mdash; b: 9 Mar 1862 in St Augustine, Cambria, PA, USA; d: Sept 18, 1939 in West Homestead, Allegheny, PA, USA</p>
+      <p class="married">Married 1885 in Altoona, Loretto, PA, USA</p>
+    </div>
+    <div class="couple">
+      <h4>Harry F. Lawrence &amp; Adeline Eddy</h4>
+      <p>Harry &mdash; b: 13 Jun 1860 in NY; d: 17 Oct 1915 in New York City, NY, USA</p>
+      <p>Adeline &mdash; b: September, 23, 1858 in NY; d: 03/19/1939 in Union Cemetery, Ramsey, NJ</p>
+      <p class="married">Married 17 Dec 1881 in Kings, NY, USA</p>
+    </div>
+    <div class="couple">
+      <h4>Thomas William Demarest &amp; Mary E. Gillespie (2nd wife)</h4>
+      <p>Thomas &mdash; b: 2 Oct 1857 in Manhattan, NY, USA; d: 05 Mar 1942 in New York City (All Boroughs), NY, USA</p>
+      <p>Mary &mdash; b: 12 NOV 1849 in USA; d: Oct 29, 1921 in Little Ferry, Bergen, NJ, USA</p>
+      <p class="married">Married 04 May 1896 in New York, NY, USA</p>
+    </div>
+  </div>
+  <h3>Diane's grandparents</h3>
+  <div class="couples">
+    <div class="couple">
+      <h4>Walter H. Gibson &amp; Kathleen M. Carney Gibson</h4>
+      <p>Walter &mdash; b: 24 Nov 1891 in Altoona, Blair, PA, USA; d: 1962 in Pittsburgh, PA, USA</p>
+      <p>Kathleen &mdash; b: 26 Feb 1893 in Altoona, Blair, PA, USA; d: 3 Mar 1952 in Calvary Cemetery, Munhall, Allegheny, PA, USA</p>
+      <p class="married">Married 1914 in Pittsburgh Ward 4, PA, USA</p>
+    </div>
+    <div class="couple">
+      <h4>Franklin Delanor Lawrence &amp; Bessie Wilkie Demarest</h4>
+      <p>Franklin &mdash; b: 3 Feb 1882 in New York City (All Boroughs), NY, USA; d: 27 Jan 1975 in Buffalo, Erie, NY, USA</p>
+      <p>Bessie &mdash; b: 20 May 1884 in Brooklyn, NY, USA; d: 23 Apr 1968 in Paramus, Bergen, NJ, USA</p>
+      <p class="married">Married 19 Oct 1904</p>
+    </div>
+  </div>
+  <h3>Their daughter</h3>
+  <div class="person">
+    <h4>Diane Marie Gibson</h4>
+    <p>b: 11/24/1960 in Buffalo, Erie, NY, USA<br>m: 1 Sep 1984 in Clarence, Erie, NY, USA</p>
+  </div>
+  <p class="tree-note">Bessie Wilkie Demarest was born 20 May 1884 &mdash; twelve years before Thomas Demarest married Mary E. Gillespie (his second wife) in 1896. Her mother is not named on the chart.<br><a href="https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view" target="_blank" rel="noopener">View the original chart</a></p>
+</section>
 <main id="main"></main>
 <footer id="foot"></footer>
 <script>var ITEMS = [];</script>
@@ -115,14 +193,11 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   }
   var PLC = window.PLACES || [];
   var placeCount = PLC.reduce(function(a, p){ return a + p.items.length; }, 0);
-  var treeSec = '<section id="tree"><h2>Family Tree</h2>' +
-    '<p class="counts">The Gibson lineage &middot; click the chart to open it full size.</p>' +
-    '<a href="https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq&sz=w1600" alt="Gibson family tree chart" style="width:100%;max-width:760px;display:block;margin:0 auto;border:1px solid #e3d7c0;border-radius:8px;"></a></section>';
   var mapSec = '<section id="map"><h2>Places Map</h2>' +
     '<p class="counts">' + placeCount + ' items across ' + PLC.length +
     ' places \u00b7 click a pin to browse its files.</p>' +
     '<div id="pmap" style="height:70vh;min-height:420px;border:1px solid #e3d7c0;border-radius:8px;z-index:0;"></div></section>';
-  document.getElementById('main').innerHTML = treeSec + mapSec + order.map(function(p){
+  document.getElementById('main').innerHTML = mapSec + order.map(function(p){
     var g = people[p];
     var imgs = g.filter(function(e){ return e.k === 'image'; }).length;
     var subs = {};

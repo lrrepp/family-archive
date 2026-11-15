@@ -42,6 +42,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 .married { margin:.5rem 0 0; font-size:.85rem; color:#8a7358; font-style:italic; }
 .tree-note { font-size:.85rem; color:#8a7358; }
 .tree-note a { color:#7a5c3e; }
+.person h4 a, .couple h4 a { color:inherit; text-decoration:underline; text-decoration-color:#7a5c3e; }
 @media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -62,17 +63,32 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <div class="tree-lead">
     <div class="person lead">
       <img src="https://drive.google.com/thumbnail?id=1EfIvUL_oe7lKFCa7SN0D2UWC-6qKtUfj&amp;sz=w400" alt="Russell Joseph Gibson">
-      <h4>Russell Joseph Gibson</h4>
+      <h4><a href="#Russell J Gibson">Russell Joseph Gibson</a></h4>
       <p>b: 11/05/1919 in Munhall, Allegheny, PA, USA<br>d: 6 August 2013 in McAllen, TX, USA<br>m: 22 Aug 1945 in NJ, USA</p>
     </div>
     <div class="person lead">
       <img src="https://drive.google.com/thumbnail?id=1CASVKCj7aCbT0WX4bsZTHDgaU07TTjk1&amp;sz=w400" alt="Marianne Elizabeth (Betty) Lawrence">
-      <h4>Marianne Elizabeth (Betty) Lawrence</h4>
+      <h4><a href="#Marianne Elizabeth Lawrence Gibson">Marianne Elizabeth (Betty) Lawrence</a></h4>
       <p>b: 02/01/1925 in Ramsey, Bergen, NJ, USA<br>d: 06/15/1984 in Buffalo, Erie, NY, USA<br>m: 22 Aug 1945 in NJ, USA</p>
     </div>
   </div>
   <p class="tree-note">Married 22 August 1945 in New Jersey, USA.</p>
-  <h3>Diane's great-grandparents</h3>
+  <h3>Grandparents</h3>
+  <div class="couples">
+    <div class="couple">
+      <h4><a href="#Walter and Kathleen Gibson">Walter H. Gibson</a> &amp; <a href="#Walter and Kathleen Gibson">Kathleen M. Carney Gibson</a></h4>
+      <p>Walter &mdash; b: 24 Nov 1891 in Altoona, Blair, PA, USA; d: 1962 in Pittsburgh, PA, USA</p>
+      <p>Kathleen &mdash; b: 26 Feb 1893 in Altoona, Blair, PA, USA; d: 3 Mar 1952 in Calvary Cemetery, Munhall, Allegheny, PA, USA</p>
+      <p class="married">Married 1914 in Pittsburgh Ward 4, PA, USA</p>
+    </div>
+    <div class="couple">
+      <h4><a href="#Franklin D Lawrence ">Franklin Delanor Lawrence</a> &amp; <a href="#Bessie W Demarest Lawrence">Bessie Wilkie Demarest</a></h4>
+      <p>Franklin &mdash; b: 3 Feb 1882 in New York City (All Boroughs), NY, USA; d: 27 Jan 1975 in Buffalo, Erie, NY, USA</p>
+      <p>Bessie &mdash; b: 20 May 1884 in Brooklyn, NY, USA; d: 23 Apr 1968 in Paramus, Bergen, NJ, USA</p>
+      <p class="married">Married 19 Oct 1904</p>
+    </div>
+  </div>
+  <h3>Great-Grandparents</h3>
   <div class="couples">
     <div class="couple">
       <h4>Winfield H. Gibson &amp; Mary E. "May" Kelly (Kelley)</h4>
@@ -81,7 +97,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
       <p class="married">Married 1882</p>
     </div>
     <div class="couple">
-      <h4>John Byrne Carney &amp; Jenny (Jane) Ivory</h4>
+      <h4><a href="#John Byrne Carney ">John Byrne Carney</a> &amp; <a href="#Jenny Ivory Carney">Jenny (Jane) Ivory</a></h4>
       <p>John &mdash; b: 14 September 1860 in Loretto, Cambria, PA, USA; d: Abt 1945 in 315 Cherry St., West Homestead, PA</p>
       <p>Jenny &mdash; b: 9 Mar 1862 in St Augustine, Cambria, PA, USA; d: Sept 18, 1939 in West Homestead, Allegheny, PA, USA</p>
       <p class="married">Married 1885 in Altoona, Loretto, PA, USA</p>
@@ -93,31 +109,11 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
       <p class="married">Married 17 Dec 1881 in Kings, NY, USA</p>
     </div>
     <div class="couple">
-      <h4>Thomas William Demarest &amp; Mary E. Gillespie (2nd wife)</h4>
+      <h4><a href="#Thomas William Demarest">Thomas William Demarest</a> &amp; Mary E. Gillespie (2nd wife)</h4>
       <p>Thomas &mdash; b: 2 Oct 1857 in Manhattan, NY, USA; d: 05 Mar 1942 in New York City (All Boroughs), NY, USA</p>
       <p>Mary &mdash; b: 12 NOV 1849 in USA; d: Oct 29, 1921 in Little Ferry, Bergen, NJ, USA</p>
       <p class="married">Married 04 May 1896 in New York, NY, USA</p>
     </div>
-  </div>
-  <h3>Diane's grandparents</h3>
-  <div class="couples">
-    <div class="couple">
-      <h4>Walter H. Gibson &amp; Kathleen M. Carney Gibson</h4>
-      <p>Walter &mdash; b: 24 Nov 1891 in Altoona, Blair, PA, USA; d: 1962 in Pittsburgh, PA, USA</p>
-      <p>Kathleen &mdash; b: 26 Feb 1893 in Altoona, Blair, PA, USA; d: 3 Mar 1952 in Calvary Cemetery, Munhall, Allegheny, PA, USA</p>
-      <p class="married">Married 1914 in Pittsburgh Ward 4, PA, USA</p>
-    </div>
-    <div class="couple">
-      <h4>Franklin Delanor Lawrence &amp; Bessie Wilkie Demarest</h4>
-      <p>Franklin &mdash; b: 3 Feb 1882 in New York City (All Boroughs), NY, USA; d: 27 Jan 1975 in Buffalo, Erie, NY, USA</p>
-      <p>Bessie &mdash; b: 20 May 1884 in Brooklyn, NY, USA; d: 23 Apr 1968 in Paramus, Bergen, NJ, USA</p>
-      <p class="married">Married 19 Oct 1904</p>
-    </div>
-  </div>
-  <h3>Their daughter</h3>
-  <div class="person">
-    <h4>Diane Marie Gibson</h4>
-    <p>b: 11/24/1960 in Buffalo, Erie, NY, USA<br>m: 1 Sep 1984 in Clarence, Erie, NY, USA</p>
   </div>
   <p class="tree-note">Bessie Wilkie Demarest was born 20 May 1884 &mdash; twelve years before Thomas Demarest married Mary E. Gillespie (his second wife) in 1896. Her mother is not named on the chart.<br><a href="https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view" target="_blank" rel="noopener">View the original chart</a></p>
 </section>

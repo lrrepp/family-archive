@@ -18,6 +18,8 @@ section { margin:2.5rem 0; border-top:2px solid #d9cbb2; padding-top:1.2rem; }
 h2 { margin:0 0 .2rem; font-size:1.6rem; }
 .counts { color:#8a7358; margin:.2rem 0 1rem; font-size:.95rem; }
 h3 { font-size:1.1rem; color:var(--accent); margin:1.4rem 0 .6rem; }
+#all-relatives > section { margin:0 0 2.5rem; border-top:none; padding-top:0; }
+#all-relatives > section > h3 { font-size:1.3rem; color:inherit; margin:0 0 .6rem; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:.7rem; }
 .card { display:block; background:var(--card); border:1px solid #e3d7c0; border-radius:8px; overflow:hidden;
         text-decoration:none; color:var(--ink); }
@@ -192,7 +194,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   var totalDocs = ITEMS.length - totalImgs;
   document.getElementById('stats').textContent =
     order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links';
-  document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#map">Map</a>' +
+  document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#heritage">Heritage</a><a href="#map">Map</a><a href="#all-relatives">All Relatives</a>' +
     order.map(function(p){
     return '<a href="#' + esc(p) + '">' + esc(p) + '</a>';
   }).join('');
@@ -215,7 +217,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
     '<p class="counts">' + placeCount + ' items across ' + PLC.length +
     ' places \u00b7 click a pin to browse its files.</p>' +
     '<div id="pmap" style="height:70vh;min-height:420px;border:1px solid #e3d7c0;border-radius:8px;z-index:0;"></div></section>';
-  document.getElementById('main').innerHTML = mapSec + order.map(function(p){
+  document.getElementById('main').innerHTML = mapSec + '<section id="all-relatives"><h2>All Relatives</h2>' + order.map(function(p){
     var g = people[p];
     var imgs = g.filter(function(e){ return e.k === 'image'; }).length;
     var subs = {};
@@ -227,10 +229,10 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
       return '<div class="sub">' + (label ? '<h3>' + label + '</h3>' : '') +
         '<div class="' + cls + '">' + list.map(row).join('') + '</div></div>';
     }).join('');
-    return '<section id="' + esc(p) + '"><h2>' + esc(p) + '</h2>' +
+    return '<section id="' + esc(p) + '"><h3>' + esc(p) + '</h3>' +
       '<p class="counts">' + imgs + ' photos \u00b7 ' + (g.length - imgs) + ' documents &amp; links</p>' +
       body + '</section>';
-  }).join('');
+  }).join('') + '</section>';
   document.getElementById('foot').innerHTML = 'The Gibson Family Archive \u00b7 ' + ITEMS.length + ' items total \u00b7 <a href="contributors.html" style="color:#7a5c3e;">Site creator &amp; contributors</a>';
   initPlacesMap();
 })();

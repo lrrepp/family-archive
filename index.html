@@ -194,7 +194,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   var totalDocs = ITEMS.length - totalImgs;
   document.getElementById('stats').textContent =
     order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links';
-  document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#heritage">Heritage</a><a href="#map">Map</a><a href="#all-relatives">All Relatives</a>' +
+  document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#heritage">Heritage</a><a href="#map">Places Map</a><a href="#all-relatives">All Relatives</a>' +
     order.map(function(p){
     return '<a href="#' + esc(p) + '">' + esc(p) + '</a>';
   }).join('');

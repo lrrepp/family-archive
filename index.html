@@ -11,7 +11,7 @@ body { margin:0; font-family:Georgia,serif; color:var(--ink); background:var(--p
 header { background:#2b2118; color:#f5efe2; padding:3rem 1.5rem; text-align:center; }
 header h1 { margin:0 0 .5rem; font-size:2.2rem; letter-spacing:.02em; }
 header p { margin:.25rem 0; opacity:.85; }
-nav { background:#3a2d20; padding:.6rem 1rem; position:sticky; top:0; z-index:10; overflow-x:auto; white-space:nowrap; }
+nav { background:#1e4d38; padding:.6rem 1rem; position:sticky; top:0; z-index:10; overflow-x:auto; white-space:nowrap; }
 nav a { color:#e8dcc4; text-decoration:none; margin-right:1.1rem; font-size:.92rem; }
 main { max-width:1100px; margin:0 auto; padding:1.5rem 1rem 4rem; }
 section { margin:2.5rem 0; border-top:2px solid #d9cbb2; padding-top:1.2rem; }
@@ -39,7 +39,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 <header>
   <h1>The Gibson Family Archive</h1>
   <p id="stats"></p>
-  <p style="font-size:.9rem">A private hub for the family &mdash; click any photo or document to open it.</p>
+  <p style="font-size:.9rem">A private hub for the family &mdash; click any photo or document to open it. Scroll/drag the navigation bar to see more section links. Hub still a work in progress.</p>
   <p style="font-size:.95rem">Spot a mistake, recognize someone, or have a memory to add? <a href="https://family-archive-suggestions.lovable.app" style="color:#f5efe2;">Add suggestions here</a></p>
 </header>
 <nav id="nav"></nav>
@@ -96,7 +96,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   var totalDocs = ITEMS.length - totalImgs;
   document.getElementById('stats').textContent =
     order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links';
-  document.getElementById('nav').innerHTML = '<a href="https://family-archive-suggestions.lovable.app">Add suggestions here</a><a href="#map">Map</a>' +
+  document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#map">Map</a>' +
     order.map(function(p){
     return '<a href="#' + esc(p) + '">' + esc(p) + '</a>';
   }).join('');
@@ -115,11 +115,14 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   }
   var PLC = window.PLACES || [];
   var placeCount = PLC.reduce(function(a, p){ return a + p.items.length; }, 0);
+  var treeSec = '<section id="tree"><h2>Family Tree</h2>' +
+    '<p class="counts">The Gibson lineage &middot; click the chart to open it full size.</p>' +
+    '<a href="https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq&sz=w1600" alt="Gibson family tree chart" style="width:100%;max-width:760px;display:block;margin:0 auto;border:1px solid #e3d7c0;border-radius:8px;"></a></section>';
   var mapSec = '<section id="map"><h2>Places Map</h2>' +
     '<p class="counts">' + placeCount + ' items across ' + PLC.length +
     ' places \u00b7 click a pin to browse its files.</p>' +
     '<div id="pmap" style="height:70vh;min-height:420px;border:1px solid #e3d7c0;border-radius:8px;z-index:0;"></div></section>';
-  document.getElementById('main').innerHTML = mapSec + order.map(function(p){
+  document.getElementById('main').innerHTML = treeSec + mapSec + order.map(function(p){
     var g = people[p];
     var imgs = g.filter(function(e){ return e.k === 'image'; }).length;
     var subs = {};

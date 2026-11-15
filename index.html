@@ -43,9 +43,11 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 .tree-note { font-size:.85rem; color:#8a7358; }
 .tree-note a { color:#7a5c3e; }
 .person h4 a, .couple h4 a { color:inherit; text-decoration:underline; text-decoration-color:#7a5c3e; }
-.heritage-row { display:flex; align-items:center; gap:1rem; }
+.heritage-row { display:flex; align-items:flex-start; gap:1rem; }
 .heritage-row img { width:120px; height:120px; object-fit:cover; border-radius:50%; flex-shrink:0; }
-.heritage-row p { margin:.3rem 0; }
+.heritage-row p { margin:0 0 .3rem; }
+.research-links { margin:.2rem 0 0; padding-left:1.2rem; font-size:.85rem; }
+.research-links a { color:#7a5c3e; }
 @media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -126,7 +128,13 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
     <img src="https://drive.google.com/thumbnail?id=1mXtN-YQp7ymEW1TGMffF9OhqQipB26Va&amp;sz=w400" alt="Gibson tartan">
     <div>
       <p><a href="#Scottish Heritage">Scottish Heritage</a> &mdash; the family's Scottish roots.</p>
-      <p class="tree-note">Research: <a href="https://www.tartanregister.gov.uk/tartanDetails.aspx?ref=1338" target="_blank" rel="noopener">Gibson tartan, Scottish Register of Tartans</a> &middot; <a href="https://www.theclanbuchanan.com/gibson" target="_blank" rel="noopener">Gibson, sept of Clan Buchanan</a> &middot; <a href="https://www.theheraldrysociety.com/about-heraldry/frequently-asked-questions/" target="_blank" rel="noopener">Heraldry Society FAQ</a> &middot; <a href="https://coadb.com/surnames/gibson-arms.html" target="_blank" rel="noopener">Gibson arms in Burke's General Armory</a></p>
+      <p class="tree-note">Research:</p>
+      <ul class="research-links">
+        <li><a href="https://www.tartanregister.gov.uk/tartanDetails.aspx?ref=1338" target="_blank" rel="noopener">Gibson tartan, Scottish Register of Tartans</a></li>
+        <li><a href="https://www.theclanbuchanan.com/gibson" target="_blank" rel="noopener">Gibson, sept of Clan Buchanan</a></li>
+        <li><a href="https://www.theheraldrysociety.com/about-heraldry/frequently-asked-questions/" target="_blank" rel="noopener">Heraldry Society FAQ</a></li>
+        <li><a href="https://coadb.com/surnames/gibson-arms.html" target="_blank" rel="noopener">Gibson arms in Burke's General Armory</a></li>
+      </ul>
     </div>
   </div>
 </section>

@@ -43,6 +43,9 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 .tree-note { font-size:.85rem; color:#8a7358; }
 .tree-note a { color:#7a5c3e; }
 .person h4 a, .couple h4 a { color:inherit; text-decoration:underline; text-decoration-color:#7a5c3e; }
+.heritage-row { display:flex; align-items:center; gap:1rem; }
+.heritage-row img { width:120px; height:120px; object-fit:cover; border-radius:50%; flex-shrink:0; }
+.heritage-row p { margin:.3rem 0; }
 @media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -59,7 +62,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 <nav id="nav"></nav>
 <section id="tree">
   <h2>Family Tree</h2>
-  <p class="counts">The Gibson lineage &mdash; from the chart Diane Marie Gibson compiled.</p>
+  <p class="counts">The Gibson lineage</p>
   <div class="tree-lead">
     <div class="person lead">
       <img src="https://drive.google.com/thumbnail?id=1EfIvUL_oe7lKFCa7SN0D2UWC-6qKtUfj&amp;sz=w400" alt="Russell Joseph Gibson">
@@ -73,7 +76,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
     </div>
   </div>
   <p class="tree-note">Married 22 August 1945 in New Jersey, USA.</p>
-  <p class="tree-note"><a href="#Scottish Heritage">Scottish Heritage</a> &mdash; the family's Scottish roots, now in its own section below.</p>
+
   <h3>Grandparents</h3>
   <div class="couples">
     <div class="couple">
@@ -116,7 +119,16 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
       <p class="married">Married 04 May 1896 in New York, NY, USA</p>
     </div>
   </div>
-  <p class="tree-note">Bessie Wilkie Demarest was born 20 May 1884 &mdash; twelve years before Thomas Demarest married Mary E. Gillespie (his second wife) in 1896. Her mother is not named on the chart.<br><a href="https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view" target="_blank" rel="noopener">View the original chart</a></p>
+  <p class="tree-note">Bessie Wilkie Demarest was born 20 May 1884 &mdash; twelve years before Thomas Demarest married Mary E. Gillespie (his second wife) in 1896. Her mother is not named on the chart.</p>
+</section>
+<section id="heritage">
+  <div class="heritage-row">
+    <img src="https://drive.google.com/thumbnail?id=1mXtN-YQp7ymEW1TGMffF9OhqQipB26Va&amp;sz=w400" alt="Gibson tartan">
+    <div>
+      <p><a href="#Scottish Heritage">Scottish Heritage</a> &mdash; the family's Scottish roots.</p>
+      <p class="tree-note">Research: <a href="https://www.tartanregister.gov.uk/tartanDetails.aspx?ref=1338" target="_blank" rel="noopener">Gibson tartan, Scottish Register of Tartans</a> &middot; <a href="https://www.theclanbuchanan.com/gibson" target="_blank" rel="noopener">Gibson, sept of Clan Buchanan</a> &middot; <a href="https://www.theheraldrysociety.com/about-heraldry/frequently-asked-questions/" target="_blank" rel="noopener">Heraldry Society FAQ</a> &middot; <a href="https://coadb.com/surnames/gibson-arms.html" target="_blank" rel="noopener">Gibson arms in Burke's General Armory</a></p>
+    </div>
+  </div>
 </section>
 <main id="main"></main>
 <footer id="foot"></footer>

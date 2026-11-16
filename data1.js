@@ -1,10 +1,10 @@
 ITEMS.push(
-{"d":".","n":"betty-lawrence-portrait.jpg","k":"image","u":"https://drive.google.com/file/d/1CASVKCj7aCbT0WX4bsZTHDgaU07TTjk1/view","t":"https://drive.google.com/thumbnail?id=1CASVKCj7aCbT0WX4bsZTHDgaU07TTjk1&sz=w400"},
+{"d":".","n":"betty-lawrence-portrait.jpg","k":"image","u":"https://drive.google.com/file/d/1ezyKF-Ujzi0mC96XT8g0EmXsb1zABlxQ/view","t":"https://drive.google.com/thumbnail?id=1ezyKF-Ujzi0mC96XT8g0EmXsb1zABlxQ&sz=w400"},
 {"d":".","n":"contributor-aunt-diane.jpg","k":"image","u":"https://drive.google.com/file/d/13y3nUtJaxtznoYd9aC1ghLNzVvRWC2r8/view","t":"https://drive.google.com/thumbnail?id=13y3nUtJaxtznoYd9aC1ghLNzVvRWC2r8&sz=w400"},
 {"d":".","n":"creator-leland-repp.jpg","k":"image","u":"https://drive.google.com/file/d/1sNxZNuAWHxAqgZnXF8ICaBGRvibwx9px/view","t":"https://drive.google.com/thumbnail?id=1sNxZNuAWHxAqgZnXF8ICaBGRvibwx9px&sz=w400"},
 {"d":".","n":"gibson-family-tree-chart.jpg","k":"image","u":"https://drive.google.com/file/d/1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq/view","t":"https://drive.google.com/thumbnail?id=1PA3jVmVrvLD929BFYYpi_En3KgOjh6Rq&sz=w400"},
 {"d":".","n":"gibson-tartan.jpg","k":"image","u":"https://drive.google.com/file/d/1mXtN-YQp7ymEW1TGMffF9OhqQipB26Va/view","t":"https://drive.google.com/thumbnail?id=1mXtN-YQp7ymEW1TGMffF9OhqQipB26Va&sz=w400"},
-{"d":".","n":"russell-joseph-gibson-portrait.jpg","k":"image","u":"https://drive.google.com/file/d/1EfIvUL_oe7lKFCa7SN0D2UWC-6qKtUfj/view","t":"https://drive.google.com/thumbnail?id=1EfIvUL_oe7lKFCa7SN0D2UWC-6qKtUfj&sz=w400"},
+{"d":".","n":"russell-joseph-gibson-portrait.jpg","k":"image","u":"https://drive.google.com/file/d/1gbyOugLtZ3Qt5HlkASNbONogNauXu-CN/view","t":"https://drive.google.com/thumbnail?id=1gbyOugLtZ3Qt5HlkASNbONogNauXu-CN&sz=w400"},
 {"d":"Bessie W Demarest Lawrence","n":" .pdf","k":"doc","u":"https://drive.google.com/file/d/19fhp_pQu6MIAoQmSBzsW2DRR-qMMZ3Mi/view","t":"https://drive.google.com/thumbnail?id=19fhp_pQu6MIAoQmSBzsW2DRR-qMMZ3Mi&sz=w400"},
 {"d":"Bessie W Demarest Lawrence","n":"1910 US Census Brookly Ward 30 .jpg","k":"image","u":"https://drive.google.com/file/d/1XYhMO4qKguQT6bzcIzTxKrJThxaOp0Xx/view","t":"https://drive.google.com/thumbnail?id=1XYhMO4qKguQT6bzcIzTxKrJThxaOp0Xx&sz=w400"},
 {"d":"Bessie W Demarest Lawrence","n":"1910 United States Federal Census - Ancestry.com.pdf","k":"doc","u":"https://drive.google.com/file/d/1PqDznmQlWhd8YYA_Rf6iF4ra48uLowvl/view","t":"https://drive.google.com/thumbnail?id=1PqDznmQlWhd8YYA_Rf6iF4ra48uLowvl&sz=w400"},

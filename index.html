@@ -265,7 +265,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
       '<p class="counts">' + imgs + ' photos \u00b7 ' + (g.length - imgs) + ' documents &amp; links</p>' +
       body + '</section>';
   }).join('') + '</section>';
-  document.getElementById('foot').innerHTML = 'The Gibson Family Archive \u00b7 ' + order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links \u00b7 ' + ITEMS.length + ' items total \u00b7 <a href="contributors.html" style="color:#7a5c3e;">Site creator &amp; contributors</a>';
+  document.getElementById('foot').innerHTML = 'The Gibson Family Archive \u00b7 ' + order.filter(function(p){ return p !== 'Family Archive'; }).length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links \u00b7 ' + ITEMS.length + ' items total \u00b7 <a href="contributors.html" style="color:#7a5c3e;">Site creator &amp; contributors</a>';
   initPlacesMap();
   var q = document.getElementById('q');
   function doSearch(){

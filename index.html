@@ -140,7 +140,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <div class="heritage-row">
     <img src="https://drive.google.com/thumbnail?id=1mXtN-YQp7ymEW1TGMffF9OhqQipB26Va&amp;sz=w400" alt="Gibson tartan">
     <div>
-      <p><a href="#Scottish Heritage">Scottish Heritage</a> &mdash; the family's (Gibson) Scottish roots.</p>
+      <p><a href="#Heritage/Scottish Heritage">Scottish Heritage</a> &mdash; the family's (Gibson) Scottish roots.</p>
       <p class="tree-note">Research:</p>
       <ul class="research-links">
         <li><a href="https://www.tartanregister.gov.uk/tartanDetails.aspx?ref=1338" target="_blank" rel="noopener">Gibson tartan, Scottish Register of Tartans</a></li>
@@ -153,7 +153,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <div class="heritage-row">
     <img src="https://drive.google.com/thumbnail?id=1UfWru0KXDYj91eIqDCnbP9VRoxQxwM6_&amp;sz=w400" alt="Demarest crest">
     <div>
-      <p><a href="#Scottish Heritage/Demarest Heritage">French Heritage</a> &mdash; the family's French (Demarest) roots.</p>
+      <p><a href="#Heritage/French Heritage">French Heritage</a> &mdash; the family's French (Demarest) roots.</p>
       <p class="tree-note">Research:</p>
       <ul class="research-links">
         <li><a href="https://demarestnj.gov/departments/history" target="_blank" rel="noopener">Demarest, New Jersey &mdash; Borough Historian</a></li>
@@ -218,7 +218,7 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   document.getElementById('stats').textContent =
     order.length + ' family collections \u00b7 ' + totalImgs + ' photos \u00b7 ' + totalDocs + ' documents & links';
   document.getElementById('nav').innerHTML = '<a href="#tree">Family Tree</a><a href="#heritage">Heritage</a><a href="#map">Places Map</a><a href="#all-relatives">All Relatives</a>' +
-    order.map(function(p){
+    order.filter(function(p){ return p !== 'Heritage'; }).map(function(p){
     return '<a href="#' + esc(p) + '">' + esc(p) + '</a>';
   }).join('');
   function row(e){

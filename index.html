@@ -50,9 +50,9 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 .heritage-row p { margin:0 0 .3rem; }
 .research-links { margin:.2rem 0 0; padding-left:1.2rem; font-size:.85rem; }
 .research-links a { color:#7a5c3e; }
-#searchbar { display:flex; gap:.5rem; align-items:center; max-width:900px; margin:1.2rem auto 0; padding:0 1rem; }
+#searchbar { display:flex; gap:.5rem; align-items:center; max-width:560px; margin:1rem auto 0; }
 #searchbar input { flex:1; font:inherit; padding:.55rem .7rem; border:1px solid #c9b69a; border-radius:6px; background:#fff; color:var(--ink); }
-#qcount { font-size:.85rem; color:#8a7358; white-space:nowrap; }
+#qcount { font-size:.85rem; color:#e8dcc4; white-space:nowrap; }
 #noresults { max-width:900px; margin:.5rem auto 0; padding:0 1rem; color:#8a7358; }
 @media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
@@ -66,12 +66,12 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <p id="stats"></p>
   <p style="font-size:.9rem">A private hub for the family &mdash; click any photo or document to open it. Scroll/drag the navigation bar to see more section links. Hub still a work in progress.</p>
   <p style="font-size:.95rem">Spot a mistake, recognize someone, or have a memory to add? <a href="https://family-archive-suggestions.lovable.app" style="color:#f5efe2;">Add suggestions here</a></p>
+  <div id="searchbar">
+    <input id="q" type="search" placeholder="Search photos and documents&hellip;" aria-label="Search the archive">
+    <span id="qcount"></span>
+  </div>
 </header>
 <nav id="nav"></nav>
-<div id="searchbar">
-  <input id="q" type="search" placeholder="Search photos and documents&hellip;" aria-label="Search the archive">
-  <span id="qcount"></span>
-</div>
 <p id="noresults" style="display:none">No photos or documents match that search.</p>
 <section id="tree">
   <h2>Family Tree</h2>

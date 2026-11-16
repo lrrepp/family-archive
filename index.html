@@ -245,7 +245,13 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
     var imgs = g.filter(function(e){ return e.k === 'image'; }).length;
     var subs = {};
     g.forEach(function(e){ (subs[e.d] = subs[e.d] || []).push(e); });
-    var body = Object.keys(subs).sort().map(function(sd){
+    var body = Object.keys(subs).sort(function(a, b){
+      if (p === 'Heritage') {
+        if (a === 'Heritage/Scottish Heritage') return -1;
+        if (b === 'Heritage/Scottish Heritage') return 1;
+      }
+      return a < b ? -1 : (a > b ? 1 : 0);
+    }).map(function(sd){
       var list = subs[sd];
       var label = sd.indexOf('/') > -1 ? esc(sd.split('/').slice(1).join(' / ')) : '';
       var cls = list.some(function(e){ return e.k === 'image'; }) ? 'grid' : 'list';

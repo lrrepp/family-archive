@@ -108,7 +108,7 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <h3>Great-Grandparents</h3>
   <div class="couples">
     <div class="couple">
-      <h4>Winfield H. Gibson &amp; Mary E. "May" Kelly (Kelley)</h4>
+      <h4>Winfield H. Gibson &amp; <a href="#Thomas Kelly and Mary Kelly">Mary E. "May" Kelly (Kelley)</a></h4>
       <p>Winfield &mdash; b: 07/27/1859 in PA, USA; d: 01/01/1910 in Munhall, Allegheny, PA, USA</p>
       <p>Mary &mdash; b: 27 July 1859 in Pittsburgh, PA, USA; d: 01 Jan 1910 in Munhall, Allegheny, PA, USA</p>
       <p class="married">Married 1882</p>
@@ -146,6 +146,18 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
         <li><a href="https://www.theclanbuchanan.com/gibson" target="_blank" rel="noopener">Gibson, sept of Clan Buchanan</a></li>
         <li><a href="https://www.theheraldrysociety.com/about-heraldry/frequently-asked-questions/" target="_blank" rel="noopener">Heraldry Society FAQ</a></li>
         <li><a href="https://coadb.com/surnames/gibson-arms.html" target="_blank" rel="noopener">Gibson arms in Burke's General Armory</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="heritage-row">
+    <img src="https://drive.google.com/thumbnail?id=1UfWru0KXDYj91eIqDCnbP9VRoxQxwM6_&amp;sz=w400" alt="Demarest crest">
+    <div>
+      <p><a href="#Scottish Heritage/Demarest Heritage">French Heritage</a> &mdash; the family's French (Demarest) roots.</p>
+      <p class="tree-note">Research:</p>
+      <ul class="research-links">
+        <li><a href="https://www.wikitree.com/wiki/Marets-11" target="_blank" rel="noopener">Demarest family, WikiTree (Marets-11)</a></li>
+        <li><a href="https://pin.it/1yAVg2jtr" target="_blank" rel="noopener">Demarest Family History board, Pinterest</a></li>
+        <li><a href="https://www.worthpoint.com/worthopedia/demarest-family-1964-volumes-ii-plus-154862458" target="_blank" rel="noopener">Demarest Family, 1964, volumes I&ndash;II, WorthPoint</a></li>
       </ul>
     </div>
   </div>
@@ -235,7 +247,8 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
       var list = subs[sd];
       var label = sd.indexOf('/') > -1 ? esc(sd.split('/').slice(1).join(' / ')) : '';
       var cls = list.some(function(e){ return e.k === 'image'; }) ? 'grid' : 'list';
-      return '<div class="sub">' + (label ? '<h3>' + label + '</h3>' : '') +
+      var subId = (sd !== p) ? ' id="' + esc(sd) + '"' : '';
+      return '<div class="sub"' + subId + '>' + (label ? '<h3>' + label + '</h3>' : '') +
         '<div class="' + cls + '">' + list.map(row).join('') + '</div></div>';
     }).join('');
     return '<section id="' + esc(p) + '"><h3>' + esc(p) + '</h3>' +

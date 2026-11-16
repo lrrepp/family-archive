@@ -50,6 +50,10 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
 .heritage-row p { margin:0 0 .3rem; }
 .research-links { margin:.2rem 0 0; padding-left:1.2rem; font-size:.85rem; }
 .research-links a { color:#7a5c3e; }
+#searchbar { display:flex; gap:.5rem; align-items:center; max-width:900px; margin:1.2rem auto 0; padding:0 1rem; }
+#searchbar input { flex:1; font:inherit; padding:.55rem .7rem; border:1px solid #c9b69a; border-radius:6px; background:#fff; color:var(--ink); }
+#qcount { font-size:.85rem; color:#8a7358; white-space:nowrap; }
+#noresults { max-width:900px; margin:.5rem auto 0; padding:0 1rem; color:#8a7358; }
 @media (max-width:700px){ .tree-lead, .couples { grid-template-columns:1fr; } }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -64,6 +68,11 @@ footer { text-align:center; color:#8a7358; padding:2rem; font-size:.85rem; }
   <p style="font-size:.95rem">Spot a mistake, recognize someone, or have a memory to add? <a href="https://family-archive-suggestions.lovable.app" style="color:#f5efe2;">Add suggestions here</a></p>
 </header>
 <nav id="nav"></nav>
+<div id="searchbar">
+  <input id="q" type="search" placeholder="Search photos and documents&hellip;" aria-label="Search the archive">
+  <span id="qcount"></span>
+</div>
+<p id="noresults" style="display:none">No photos or documents match that search.</p>
 <section id="tree">
   <h2>Family Tree</h2>
   <p class="counts">The Gibson lineage</p>
@@ -235,6 +244,33 @@ function esc(s){ var d = document.createElement('div'); d.textContent = s || '';
   }).join('') + '</section>';
   document.getElementById('foot').innerHTML = 'The Gibson Family Archive \u00b7 ' + ITEMS.length + ' items total \u00b7 <a href="contributors.html" style="color:#7a5c3e;">Site creator &amp; contributors</a>';
   initPlacesMap();
+  var q = document.getElementById('q');
+  function doSearch(){
+    var v = q.value.trim().toLowerCase();
+    var total = 0;
+    document.querySelectorAll('#all-relatives > section').forEach(function(sec){
+      var head = (sec.querySelector('h3') || {}).textContent || '';
+      var secMatch = head.toLowerCase().indexOf(v) !== -1;
+      var secVisible = 0;
+      sec.querySelectorAll('.sub').forEach(function(sub){
+        var lab = (sub.querySelector('h3') || {}).textContent || '';
+        var labMatch = lab.toLowerCase().indexOf(v) !== -1;
+        var subVisible = 0;
+        sub.querySelectorAll('.card, .rowlink').forEach(function(el){
+          var m = !v || secMatch || labMatch || el.textContent.toLowerCase().indexOf(v) !== -1;
+          el.style.display = m ? '' : 'none';
+          if (m) subVisible++;
+        });
+        sub.style.display = subVisible ? '' : 'none';
+        secVisible += subVisible;
+      });
+      sec.style.display = secVisible ? '' : 'none';
+      total += secVisible;
+    });
+    document.getElementById('noresults').style.display = (v && !total) ? '' : 'none';
+    document.getElementById('qcount').textContent = v ? total + ' matching' : '';
+  }
+  q.addEventListener('input', doSearch);
 })();
 </script>
 </body>

@@ -1,5 +1,4 @@
 ITEMS.push(
-{"d":"Patrick Ivory","n":"Patrick Ivory* - Facts.pdf","k":"doc","u":"https://drive.google.com/file/d/1iMqkQV86_ZFTZmR_6skKgWlo5NxFZfXn/view","t":"https://drive.google.com/thumbnail?id=1iMqkQV86_ZFTZmR_6skKgWlo5NxFZfXn&sz=w400"},
 {"d":"Patrick Ivory","n":"Patricks father Mathew Ivory will:probate.jpg","k":"image","u":"https://drive.google.com/file/d/1UB7WfvC-nC1ygF0s04wDK6pQxoskrzuG/view","t":"https://drive.google.com/thumbnail?id=1UB7WfvC-nC1ygF0s04wDK6pQxoskrzuG&sz=w400"},
 {"d":"Patrick Ivory","n":"Pennsylvania, Death Certificates, 1906-1964 ....webloc","k":"link","u":"https://www.ancestry.com/mediaui-viewer/collection/1030/tree/88409281/person/32575962116/media/23d27cd6-c4d2-47a9-89ef-ce7dbb707466?galleryindex=5&amp;sort=-created","dom":"www.ancestry.com"},
 {"d":"Patrick Ivory","n":"Relationship between Patrick Ivory* & Diane Marie Gibson..pdf","k":"doc","u":"https://drive.google.com/file/d/1k9KiMX4in0pWyUXh795IE8BgVzi9pAzw/view","t":"https://drive.google.com/thumbnail?id=1k9KiMX4in0pWyUXh795IE8BgVzi9pAzw&sz=w400"},

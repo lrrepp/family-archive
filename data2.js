@@ -1,5 +1,4 @@
 ITEMS.push(
-{"d":"Heritage/French Heritage/David and Marie together on their way to America","n":"271 David and Marie come to the new world.jpg","k":"image","u":"https://drive.google.com/file/d/1_LYV9L4ghtyLvuAv6K3r8rDUqsQjearO/view","t":"https://drive.google.com/thumbnail?id=1_LYV9L4ghtyLvuAv6K3r8rDUqsQjearO&sz=w400"},
 {"d":"Heritage/French Heritage/David and Marie together on their way to America","n":"271 decendents.jpg","k":"image","u":"https://drive.google.com/file/d/1eznvQL5v0ktIMLBmdLQaWXCR7V3U5kf7/view","t":"https://drive.google.com/thumbnail?id=1eznvQL5v0ktIMLBmdLQaWXCR7V3U5kf7&sz=w400"},
 {"d":"Heritage/French Heritage/David and Marie together on their way to America","n":"2nd journey 05FC518D-15E1-455E-A0EC-67FC9471EB45.jpg","k":"image","u":"https://drive.google.com/file/d/13wozYtK8IcnxNUVpGwOrLTs6Y7PQEcM1/view","t":"https://drive.google.com/thumbnail?id=13wozYtK8IcnxNUVpGwOrLTs6Y7PQEcM1&sz=w400"},
 {"d":"Heritage/French Heritage/David and Marie together on their way to America","n":"DAvid Demares Life Story.pdf","k":"doc","u":"https://drive.google.com/file/d/1LcdpKB7IaqX0J3zGvDoC-QasphQM26DT/view","t":"https://drive.google.com/thumbnail?id=1LcdpKB7IaqX0J3zGvDoC-QasphQM26DT&sz=w400"},
@@ -308,5 +307,6 @@ ITEMS.push(
 {"d":"Patrick Ivory","n":"Ivory Patrick headstone ....webloc","k":"link","u":"https://www.ancestry.com/mediaui-viewer/collection/1030/tree/88409281/person/32575962266/media/93ca31f1-f533-475b-8b19-527cbf128bc4?galleryindex=7&amp;sort=-created","dom":"www.ancestry.com"},
 {"d":"Patrick Ivory","n":"Mary Ellen McMullen death certificate( daughter).jpg","k":"image","u":"https://drive.google.com/file/d/1b81LyD4ZQ_nIbzVH2QGX2GPZ3noITf-8/view","t":"https://drive.google.com/thumbnail?id=1b81LyD4ZQ_nIbzVH2QGX2GPZ3noITf-8&sz=w400"},
 {"d":"Patrick Ivory","n":"Patrick Ivory Narrative ....webloc","k":"link","u":"https://www.ancestry.com/mediaui-viewer/collection/1030/tree/88409281/person/32575962266/media/69aab23f-52f8-4635-85c5-c7d9aa01ce37?galleryindex=1&amp;sort=-created","dom":"www.ancestry.com"},
-{"d":"Patrick Ivory","n":"Patrick Ivory* & Diane Marie Gibson..pdf","k":"doc","u":"https://drive.google.com/file/d/1anUMiUMF2ur__chCx3Zq1VQjWAPe7EH_/view","t":"https://drive.google.com/thumbnail?id=1anUMiUMF2ur__chCx3Zq1VQjWAPe7EH_&sz=w400"}
+{"d":"Patrick Ivory","n":"Patrick Ivory* & Diane Marie Gibson..pdf","k":"doc","u":"https://drive.google.com/file/d/1anUMiUMF2ur__chCx3Zq1VQjWAPe7EH_/view","t":"https://drive.google.com/thumbnail?id=1anUMiUMF2ur__chCx3Zq1VQjWAPe7EH_&sz=w400"},
+{"d":"Patrick Ivory","n":"Patrick Ivory* - Facts.pdf","k":"doc","u":"https://drive.google.com/file/d/1iMqkQV86_ZFTZmR_6skKgWlo5NxFZfXn/view","t":"https://drive.google.com/thumbnail?id=1iMqkQV86_ZFTZmR_6skKgWlo5NxFZfXn&sz=w400"}
 );
